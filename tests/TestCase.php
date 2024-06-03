@@ -2,8 +2,8 @@
 
 namespace carlosmls1\FilamentIntercom\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use carlosmls1\FilamentIntercom\FilamentIntercomServiceProvider;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
