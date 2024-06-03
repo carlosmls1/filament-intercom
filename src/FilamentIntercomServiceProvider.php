@@ -23,10 +23,8 @@ class FilamentIntercomServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasViewComposer('filament-intercom::tracking', function (View $view) {
                 $config = config('filament-intercom');
-                $canShow = $config['enabled'] &&
-                    ! empty($config['base_url']) &&
-                    ! empty($config['tracker_filename']) &&
-                    ! empty($config['site_id']);
+                $canShow = $config['api_base'] &&
+                    ! empty($config['app_id']);
                 $view->with(compact(
                     'config',
                     'canShow',
