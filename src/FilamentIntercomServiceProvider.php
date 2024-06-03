@@ -17,17 +17,21 @@ class FilamentIntercomServiceProvider extends PackageServiceProvider
          *
          * More info: https://github.com/spatie/laravel-package-tools
          */
+
         $package
             ->name('filament-intercom')
             ->hasConfigFile()
             ->hasViews()
-            ->hasViewComposer('filament-intercom::tracking', function (View $view) {
+            ->hasViewComposer('filament-intercom::code', function (View $view) {
                 $config = config('filament-intercom');
+                $user =  auth()->user();
+
                 $canShow = $config['api_base'] &&
                     ! empty($config['app_id']);
                 $view->with(compact(
                     'config',
                     'canShow',
+                    'user'
                 ));
             });
     }
