@@ -24,7 +24,7 @@ class FilamentIntercomServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasViewComposer('filament-intercom::code', function (View $view) {
                 $config = config('filament-intercom');
-                $user =  auth()->user();
+                $user = auth()->user();
 
                 $canShow = $config['api_base'] &&
                     ! empty($config['app_id']);
