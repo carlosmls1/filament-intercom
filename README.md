@@ -1,13 +1,13 @@
 <p class="filament-hidden">
-<img src="https://banners.beyondco.de/filament-matomo.png?theme=light&packageManager=composer+require&packageName=marcogermani87%2Ffilament-matomo&pattern=architect&style=style_1&description=Easy+Matomo+tracker+integration+for+Filament&md=1&showWatermark=0&fontSize=100px&images=https%3A%2F%2Flaravel.com%2Fimg%2Flogomark.min.svg" class="filament-hidden">
+<img src="https://banners.beyondco.de/filament-intercom.png?theme=light&packageManager=composer+require&packageName=carlosmls1%2Ffilament-intercom&pattern=architect&style=style_1&description=Easy+Intercom+integration+for+Filament&md=1&showWatermark=0&fontSize=100px&images=https%3A%2F%2Flaravel.com%2Fimg%2Flogomark.min.svg" class="filament-hidden">
 </p>
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/marcogermani87/filament-matomo.svg?style=flat-square)](https://packagist.org/packages/marcogermani87/filament-matomo)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/marcogermani87/filament-matomo/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/marcogermani87/filament-matomo/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/marcogermani87/filament-matomo/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/marcogermani87/filament-matomo/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/marcogermani87/filament-matomo.svg?style=flat-square)](https://packagist.org/packages/marcogermani87/filament-matomo)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/carlosmls1/filament-intercom.svg?style=flat-square)](https://packagist.org/packages/carlosmls1/filament-intercom)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/carlosmls1/filament-intercom/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/carlosmls1/filament-intercom/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/carlosmls1/filament-intercom/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/carlosmls1/filament-intercom/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/carlosmls1/filament-intercom.svg?style=flat-square)](https://packagist.org/packages/carlosmls1/filament-intercom)
 
-A package to easily include Matomo tracker in [Filament](https://filamentphp.com).
+A package to easily include Intercom in [Filament](https://filamentphp.com).
 
 ## Version Compatibility
 
@@ -20,13 +20,13 @@ A package to easily include Matomo tracker in [Filament](https://filamentphp.com
 You can install the package via composer:
 
 ```bash
-composer require marcogermani87/filament-matomo
+composer require carlosmls1/filament-intercom
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="filament-matomo-config"
+php artisan vendor:publish --tag="filament-intercom-config"
 ```
 
 This is the contents of the published config file:
@@ -34,13 +34,9 @@ This is the contents of the published config file:
 ```php
 return [
 
-    'enabled' => env('FILAMENT_MATOMO_ENABLED', false),
+    'api_base' => env('FILAMENT_INTERCOM_API_BASE', false),
 
-    'base_url' => env('FILAMENT_MATOMO_BASE_URL'),
-
-    'tracker_filename' => env('FILAMENT_MATOMO_TRACKER_FILENAME', 'matomo.php'),
-
-    'site_id' => env('FILAMENT_MATOMO_SITE_ID'),
+    'app_id' => env('FILAMENT_INTERCOM_APP_ID'),
 
 ];
 ```
@@ -48,7 +44,7 @@ return [
 ## Usage
 
 ```php
-->plugin(\MarcoGermani87\FilamentMatomo\FilamentMatomo::make())
+->plugin(\carlosmls1\FilamentIntercom\FilamentIntercom::make())
 ```
 
 ## Testing
@@ -63,6 +59,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Credits
 
+- [Carlos Morales](https://github.com/carlosmls1)
 - [Marco Germani](https://github.com/marcogermani87)
 - [All Contributors](../../contributors)
 

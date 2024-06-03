@@ -1,9 +1,9 @@
 <?php
 
-namespace MarcoGermani87\FilamentMatomo\Tests;
+namespace carlosmls1\FilamentIntercom\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use MarcoGermani87\FilamentMatomo\FilamentMatomoServiceProvider;
+use carlosmls1\FilamentIntercom\FilamentIntercomServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -13,14 +13,14 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'MarcoGermani87\\FilamentMatomo\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'carlosmls1\\FilamentIntercom\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            FilamentMatomoServiceProvider::class,
+            FilamentIntercomServiceProvider::class,
         ];
     }
 
@@ -29,7 +29,7 @@ class TestCase extends Orchestra
         config()->set('database.default', 'testing');
 
         /*
-        $migration = include __DIR__.'/../database/migrations/create_filament-matomo_table.php.stub';
+        $migration = include __DIR__.'/../database/migrations/create_filament-intercom_table.php.stub';
         $migration->up();
         */
     }

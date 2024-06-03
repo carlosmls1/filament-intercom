@@ -1,6 +1,6 @@
 <?php
 
-namespace MarcoGermani87\FilamentMatomo\Database\Factories;
+namespace carlosmls1\FilamentIntercom\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

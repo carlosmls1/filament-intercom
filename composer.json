@@ -1,14 +1,14 @@
 {
-    "name": "marcogermani87/filament-matomo",
-    "description": "Easy Matomo tracker integration for Filament",
+    "name": "carlosmls1/filament-intercom",
+    "description": "Easy Intercom tracker integration for Filament",
     "keywords": [
-        "marcogermani87",
+        "carlosmls1",
         "laravel",
-        "filament-matomo",
+        "filament-intercom",
         "filament",
-        "matomo"
+        "intercom"
     ],
-    "homepage": "https://github.com/marcogermani87/filament-matomo",
+    "homepage": "https://github.com/carlosmls1/filament-intercom",
     "license": "MIT",
     "authors": [
         {
@@ -40,13 +40,13 @@
     },
     "autoload": {
         "psr-4": {
-            "MarcoGermani87\\FilamentMatomo\\": "src/",
-            "MarcoGermani87\\FilamentMatomo\\Database\\Factories\\": "database/factories/"
+            "carlosmls1\\FilamentIntercom\\": "src/",
+            "carlosmls1\\FilamentIntercom\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MarcoGermani87\\FilamentMatomo\\Tests\\": "tests/"
+            "carlosmls1\\FilamentIntercom\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -66,10 +66,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MarcoGermani87\\FilamentMatomo\\FilamentMatomoServiceProvider"
+                "carlosmls1\\FilamentIntercom\\FilamentIntercomServiceProvider"
             ],
             "aliases": {
-                "FilamentMatomo": "MarcoGermani87\\FilamentMatomo\\Facades\\FilamentMatomo"
+                "FilamentIntercom": "carlosmls1\\FilamentIntercom\\Facades\\FilamentIntercom"
             }
         }
     },

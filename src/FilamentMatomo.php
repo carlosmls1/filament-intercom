@@ -1,23 +1,23 @@
 <?php
 
-namespace MarcoGermani87\FilamentMatomo;
+namespace carlosmls1\FilamentIntercom;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Filament\View\PanelsRenderHook;
 
-class FilamentMatomo implements Plugin
+class FilamentIntercom implements Plugin
 {
     public function getId(): string
     {
-        return FilamentMatomoServiceProvider::$name;
+        return FilamentIntercomServiceProvider::$name;
     }
 
     public function register(Panel $panel): void
     {
         $panel->renderHook(
             PanelsRenderHook::BODY_END,
-            fn () => view('filament-matomo::tracking'),
+            fn () => view('filament-intercom::code'),
         );
     }
 

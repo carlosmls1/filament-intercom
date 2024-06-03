@@ -2,12 +2,10 @@
 
 return [
 
-    'enabled' => env('FILAMENT_MATOMO_ENABLED', false),
+    'enabled' => env('FILAMENT_INTERCOM_ENABLED', true),
 
-    'base_url' => env('FILAMENT_MATOMO_BASE_URL'),
+    'api_base' => env('FILAMENT_INTERCOM_API_BASE'),
 
-    'tracker_filename' => env('FILAMENT_MATOMO_TRACKER_FILENAME', 'matomo.php'),
-
-    'site_id' => env('FILAMENT_MATOMO_SITE_ID'),
+    'app_id' => env('FILAMENT_INTERCOM_APP_ID'),
 
 ];

@@ -1,16 +1,16 @@
 <?php
 
-namespace MarcoGermani87\FilamentMatomo\Facades;
+namespace carlosmls1\FilamentIntercom\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \MarcoGermani87\FilamentMatomo\FilamentMatomo
+ * @see \carlosmls1\FilamentIntercom\FilamentIntercom
  */
-class FilamentMatomo extends Facade
+class FilamentIntercom extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \MarcoGermani87\FilamentMatomo\FilamentMatomo::class;
+        return \carlosmls1\FilamentIntercom\FilamentIntercom::class;
     }
 }

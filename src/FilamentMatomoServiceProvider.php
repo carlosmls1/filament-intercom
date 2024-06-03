@@ -1,14 +1,14 @@
 <?php
 
-namespace MarcoGermani87\FilamentMatomo;
+namespace carlosmls1\FilamentIntercom;
 
 use Illuminate\Contracts\View\View;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class FilamentMatomoServiceProvider extends PackageServiceProvider
+class FilamentIntercomServiceProvider extends PackageServiceProvider
 {
-    public static string $name = 'filament-matomo';
+    public static string $name = 'filament-intercom';
 
     public function configurePackage(Package $package): void
     {
@@ -18,11 +18,11 @@ class FilamentMatomoServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('filament-matomo')
+            ->name('filament-intercom')
             ->hasConfigFile()
             ->hasViews()
-            ->hasViewComposer('filament-matomo::tracking', function (View $view) {
-                $config = config('filament-matomo');
+            ->hasViewComposer('filament-intercom::tracking', function (View $view) {
+                $config = config('filament-intercom');
                 $canShow = $config['enabled'] &&
                     ! empty($config['base_url']) &&
                     ! empty($config['tracker_filename']) &&

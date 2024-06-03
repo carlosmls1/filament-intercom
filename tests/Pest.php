@@ -1,5 +1,5 @@
 <?php
 
-use MarcoGermani87\FilamentMatomo\Tests\TestCase;
+use carlosmls1\FilamentIntercom\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

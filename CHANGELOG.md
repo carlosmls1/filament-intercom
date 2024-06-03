@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `filament-matomo` will be documented in this file.
+All notable changes to `filament-intercom` will be documented in this file.
 
 ## v1.0.0 - 2024-05-16
 
@@ -8,4 +8,4 @@ All notable changes to `filament-matomo` will be documented in this file.
 
 * First release
 
-**Full Changelog**: https://github.com/marcogermani87/filament-matomo/commits/v1.0.0
+**Full Changelog**: https://github.com/carlosmls1/filament-intercom/commits/v1.0.0
