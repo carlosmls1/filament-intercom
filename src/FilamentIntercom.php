@@ -10,7 +10,7 @@ class FilamentIntercom implements Plugin
 {
     public function getId(): string
     {
-        return FilamentIntercomServiceProvider::$name;
+        return 'filament';//FilamentIntercomServiceProvider::$name;
     }
 
     public function register(Panel $panel): void
