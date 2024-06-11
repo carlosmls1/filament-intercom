@@ -1,6 +1,7 @@
 @php
 	$config = config('filament-intercom');
 	$canShow = !empty($config['api_base']) && !empty($config['app_id']);
+    $user = auth()->user();
 @endphp
 @if(isset($canShow) && $canShow)
 
@@ -10,9 +11,9 @@
 		window.intercomSettings = {
 			api_base: "{{ $config['api_base'] }}",
 			app_id: "{{ $config['app_id'] }}",
-			user_id: user_id, // IMPORTANT: Replace "user.id" with the variable you use to capture the user's ID
-			name: name_user, // IMPORTANT: Replace "user.name" with the variable you use to capture the user's name
-			email: email, // IMPORTANT: Replace "user.email" with the variable you use to capture the user's email address
+			user_id: "{{$user->id}}", // IMPORTANT: Replace "user.id" with the variable you use to capture the user's ID
+			name: "{{$user->name}}", // IMPORTANT: Replace "user.name" with the variable you use to capture the user's name
+			email: "{{$user->email}}", // IMPORTANT: Replace "user.email" with the variable you use to capture the user's email address
 			created_at: "", // IMPORTANT: Replace "user.createdAt" with the variable you use to capture the user's sign-up date
 		};
 	</script>
